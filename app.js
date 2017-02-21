@@ -1,9 +1,13 @@
 /*
- * Copyright 2016-present, Facebook, Inc.
- * All rights reserved.
+ * Xkcd Comics Bot
+ * ---------------
+ * Read xkcd comics on Facebook Messenger.
  *
- * This source code is licensed under the license found in the
- * LICENSE file in the root directory of this source tree.
+ * Author: Thawsitt Naing (thawsitt@cs.stanford.edu)
+ *
+ * Note: Used Facebook's Node tutorial as a starting point.
+ * This version is messy. I need to refactor and comment my code.
+ * Thanks for checking out.
  *
  */
 
