@@ -1192,6 +1192,7 @@ function showIntro(senderID) {
       sendTextMessage(senderID, "Hi " + user_first_name + ". " + intro)
       .then(sendTextMessage.bind(null, senderID, "Here, you will have access to all your favorite xkcd comics." ))
       .then(sendTextMessage.bind(null, senderID, "Let's get started. Hope you enjoy it!!"))
+      .then(showOptions.bind(null, senderID))
       .catch((error) => _log('showIntro function failed.'));
     } else {
       sendTextMessage(senderID, intro);
