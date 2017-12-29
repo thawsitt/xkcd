@@ -3,7 +3,9 @@
  * ---------------
  * Read xkcd comics on Facebook Messenger.
  *
- * Author: Thawsitt Naing (thawsitt@cs.stanford.edu) See Credits in CREDITS file at repo source.
+ * Author: Thawsitt Naing (thawsitt@cs.stanford.edu)
+ *
+ * License: MIT License for this source file (XKCD comics bot)
  *
  * Credit: Starter code from Facebook Developers website found here:
  * https://github.com/fbsamples/messenger-platform-samples/tree/tutorial-starters/quick-start
@@ -748,7 +750,7 @@ function handlePayload(senderID, payload) {
 function showAbout(recipientId) {
     sendTextMessage(recipientId, "Xkcd Comics Bot is an open-source project maintained by Thawsitt Naing.")
     .then(sendTextMessage.bind(null, recipientId, "To contribute or give feedback, please visit https://github.com/thawsitt/xkcd-comics-bot"))
-    .then(sendTextMessage.bind(null, recipientId, "This bot is not affiliated with xkcd.com. Thanks for visiting us."))
+    .then(sendTextMessage.bind(null, recipientId, "This bot is not affiliated with xkcd.com"))
     .catch((error) => _log("Error showing About section. Details: " + error));
 }
 
@@ -827,7 +829,7 @@ function sendLatestXkcd(senderID) {
 }
 
 function sendRandomXkcd(senderID) {
-  let latestID = 1800; // latest id as of Feb 2017
+  let latestID = 1935; // latest id as of Dec 29, 2017
 
   getXkcdComic('http://xkcd.com/info.0.json')
   .then((body) => {
