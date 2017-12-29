@@ -1,7 +1,7 @@
 {
-  "name": "messenger-get-started",
+  "name": "xkcd comics bot",
   "version": "1.0.0",
-  "description": "Get started example for Messenger Platform",
+  "description": "Read xkcd webcomics on FB messenger. https://m.me/xkcd.chat",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
@@ -10,10 +10,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/fbsamples/messenger-platform-samples.git"
+    "url": "https://github.com/thawsitt/xkcd.git"
   },
-  "author": "Facebook",
-  "license": "ISC",
+  "author": "Thawsitt Naing",
+  "license": "MIT",
   "dependencies": {
     "body-parser": "^1.15.0",
     "config": "^1.20.4",
