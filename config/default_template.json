@@ -1,8 +1,0 @@
-// Change the file name to default.json and fill in the following fields.
-
-{
-    "appSecret": "",
-    "pageAccessToken": "",
-    "validationToken": "",
-    "serverURL": ""
-}

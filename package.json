@@ -1,28 +1,30 @@
 {
-  "name": "xkcd_comics_bot",
-  "version": "1.0.0",
-  "description": "Read xkcd webcomics on FB messenger. https://m.me/xkcd.chat",
-  "main": "app.js",
-  "scripts": {
-    "start": "node app.js",
-    "lint": "jshint --exclude node_modules .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "name": "new-age",
+  "title": "New Age",
+  "version": "3.3.7",
+  "homepage": "http://startbootstrap.com/template-overviews/new-age",
+  "author": "Start Bootstrap",
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE"
+  },
+  "devDependencies": {
+    "bootstrap": "^3.3.7",
+    "browser-sync": "^2.13.0",
+    "font-awesome": "^4.6.3",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.10",
+    "gulp-header": "^1.8.7",
+    "gulp-less": "^3.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.4",
+    "jquery": "^1.11.3"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/thawsitt/xkcd.git"
+    "url": "https://github.com/BlackrockDigital/startbootstrap-new-age.git"
   },
-  "author": "Thawsitt Naing",
-  "license": "MIT",
   "dependencies": {
-    "body-parser": "^1.15.0",
-    "config": "^1.20.4",
-    "ejs": "^2.4.2",
-    "express": "^4.13.4",
-    "promise": "^7.1.1",
-    "request": "^2.72.0"
-  },
-  "engines": {
-    "node": "~4.1.2"
+    "simple-line-icons": "^2.3.2"
   }
 }
