@@ -1,4 +1,4 @@
-# Xkcd comics bot
+# xkcd comics bot
 
 <a href="https://thawsitt.github.io/xkcd"><img src="https://i.imgur.com/j1LaNDI.png" title="xkcd chat bot" /></a>
 
