@@ -1,5 +1,5 @@
 {
-  "name": "xkcd comics bot",
+  "name": "xkcd_comics_bot",
   "version": "1.0.0",
   "description": "Read xkcd webcomics on FB messenger. https://m.me/xkcd.chat",
   "main": "app.js",
