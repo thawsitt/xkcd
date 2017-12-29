@@ -1022,7 +1022,7 @@ function handlePayload(senderID, payload) {
 function showAbout(recipientId) {
     sendTextMessage(recipientId, "Xkcd Comics Bot is an open-source project maintained by Thawsitt Naing.")
     .then(sendTextMessage.bind(null, recipientId, "To contribute or give feedback, please visit https://github.com/thawsitt/xkcd-comics-bot"))
-    .then(sendTextMessage.bind(null, recipientId, "This bot is not affiliated with xkcd.com"))
+    .then(sendTextMessage.bind(null, recipientId, "This bot is not affiliated with xkcd.com. Thanks for visiting us."))
     .catch((error) => _log("Error showing About section. Details: " + error));
 }
 
