@@ -29,7 +29,7 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-/* jshint node: true, devel: true */
+/* jshint node: true, devel: true, esversion: 6 */
 'use strict';
 
 const 
@@ -52,7 +52,6 @@ const kGetStartedButton = 'GET_STARTED';
 const kAbout = 'ABOUT';
 const kLatest = 'LATEST';
 const kRandom = 'RANDOM';
-const kReadMore = 'READ_MORE';
 
 /*
  * Be sure to setup your config values before running this code. You can 
@@ -398,85 +397,6 @@ function sendTextMessage(recipientId, messageText) {
   return callSendAPI(messageData);
 }
 
-
-/*
- * Send a read receipt to indicate the message has been read
- *
- */
-function sendReadReceipt(recipientId) {
-  console.log("Sending a read receipt to mark message as seen");
-
-  var messageData = {
-    recipient: {
-      id: recipientId
-    },
-    sender_action: "mark_seen"
-  };
-
-  callSendAPI(messageData);
-}
-
-/*
- * Turn typing indicator on
- *
- */
-function sendTypingOn(recipientId) {
-  console.log("Turning typing indicator on");
-
-  var messageData = {
-    recipient: {
-      id: recipientId
-    },
-    sender_action: "typing_on"
-  };
-
-  callSendAPI(messageData);
-}
-
-/*
- * Turn typing indicator off
- *
- */
-function sendTypingOff(recipientId) {
-  console.log("Turning typing indicator off");
-
-  var messageData = {
-    recipient: {
-      id: recipientId
-    },
-    sender_action: "typing_off"
-  };
-
-  callSendAPI(messageData);
-}
-
-/*
- * Send a message with the account linking call-to-action
- *
- */
-function sendAccountLinking(recipientId) {
-  var messageData = {
-    recipient: {
-      id: recipientId
-    },
-    message: {
-      attachment: {
-        type: "template",
-        payload: {
-          template_type: "button",
-          text: "Welcome. Link your account.",
-          buttons:[{
-            type: "account_link",
-            url: SERVER_URL + "/authorize"
-          }]
-        }
-      }
-    }
-  };  
-
-  callSendAPI(messageData);
-}
-
 /*
  * Call the Send API. The message data goes in the body. If successful, we'll 
  * get the message id in a response 
@@ -570,7 +490,7 @@ function removeGreetingText() {
     }
   }, function (error, response, body) {
     if (!error && response.statusCode == 200) {
-      _log("Greeting text removed.")
+      _log("Greeting text removed.");
      } else {
       _log('Setting greeting text FAILED.');
       console.error("Error in removing greeting text: ", response.statusCode, response.statusMessage, body.error);
@@ -682,9 +602,9 @@ function addPersistentMenu(){
   }, function(error, response, body) {
     //console.log(response)
     if (error) {
-      console.log('Error adding persistent menu: ', error)
+      console.log('Error adding persistent menu: ', error);
     } else if (response.body.error) {
-      console.log('Error: ', response.body.error)
+      console.log('Error: ', response.body.error);
     } else {
       _log("Added Persistent Menu.");
     }
@@ -703,9 +623,9 @@ function removePersistentMenu(){
   }, function(error, response, body) {
   //console.log(response)
     if (error) {
-      console.log('Error sending messages: ', error)
+      console.log('Error sending messages: ', error);
     } else if (response.body.error) {
-      console.log('Error: ', response.body.error)
+      console.log('Error: ', response.body.error);
     }
   });
 }
@@ -738,7 +658,7 @@ function handlePayload(senderID, payload) {
     sendRandomXkcd(senderID);
   }
 
-  else if (payload = kAbout) {
+  else if (payload == kAbout) {
     showAbout(senderID);
   }
 
@@ -856,7 +776,7 @@ function sendRandomXkcd(senderID) {
             }
           }
         }
-      }
+      };
       sendTextMessage(senderID, "Sure! Here is a random comic (" +  "#" + xkcd.num + ") from xkcd.")
       .then(sendTextMessage.bind(null, senderID, '"' + xkcd.safe_title + '"'))
       .then(callSendAPI.bind(null, messageData))
