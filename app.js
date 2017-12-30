@@ -100,7 +100,6 @@ app.get('/webhook', function(req, res) {
   }  
 });
 
-
 /*
  * All callbacks for Messenger are POST-ed. They will be sent to the same
  * webhook. Be sure to subscribe your app to your page to receive callbacks
@@ -291,7 +290,6 @@ function receivedMessage(event) {
   }
 }
 
-
 /*
  * Delivery Confirmation Event
  *
@@ -316,7 +314,6 @@ function receivedDeliveryConfirmation(event) {
 
   console.log("All message before %d were delivered.", watermark);
 }
-
 
 /*
  * Postback Event
@@ -561,7 +558,6 @@ function removeGetStartedButton() {
   });
 }
 
-
 /**
  * Function: addPersistentMenu
  * --------------------------------
@@ -629,7 +625,6 @@ function removePersistentMenu(){
     }
   });
 }
-
 
 /*
  ===========================================================
@@ -718,7 +713,6 @@ function showNextButton(recipientId) {
 
   callSendAPI(messageData);
 }
-
 
 function sendLatestXkcd(senderID) {
   getXkcdComic('http://xkcd.com/info.0.json')
@@ -852,7 +846,6 @@ function showIntro(senderID) {
   });
 } 
 
-
 /**
  * Function: GET USER INFO
  * -----------------------
@@ -882,7 +875,6 @@ function getUserInfo(senderID) {
   });
 }
 
-
 /**
  * (helper) Function: _log
  * ------------------------
@@ -895,7 +887,6 @@ function _log(msg) {
   console.log('=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=');
 }
 
-
 // Start server
 // Webhooks must be available via SSL with a certificate signed by a valid 
 // certificate authority.
@@ -907,4 +898,3 @@ app.listen(app.get('port'), function() {
 });
 
 module.exports = app;
-
