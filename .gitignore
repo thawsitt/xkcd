@@ -38,3 +38,6 @@ jspm_packages
 
 # Config variables
 config/default.json
+
+# Self-reminder (local)
+todo
