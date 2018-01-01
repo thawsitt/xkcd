@@ -1,6 +1,4 @@
-# xkcd comics bot
-
-[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
+# xkcd comics bot   [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 
 <a href="https://thawsitt.github.io/xkcd"><img src="https://i.imgur.com/j1LaNDI.png" title="xkcd chat bot" /></a>
 
